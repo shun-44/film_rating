@@ -48,3 +48,6 @@
 * Stimulus Autocomplete
 * JQuery
 * Amazon Personalize
+
+### 画面遷移図
+https://www.figma.com/file/D6yosjXGDsEEsYJhjG4XFo/Web%E3%82%A2%E3%83%97%E3%83%AA%EF%BC%9AQ-Film-Rating?type=design&node-id=8%3A179&mode=design&t=dAZXppMCiAn1QMxN-1
