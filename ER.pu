@@ -23,7 +23,7 @@ entity "ratings" as ratings {
   ending / 結末 : int
   recommendation / おすすめ判断 : int
   user_id <<FK>> : bigint
-  movie_id <<FK>> : bigint
+  tmdb_id <<FK>> : bigint
 }
 
 entity "reviews" as reviews {
@@ -31,7 +31,7 @@ entity "reviews" as reviews {
   --
   text / レビュー : text
   user_id <<FK>> : bigint
-  movie_id <<FK>> : bigint
+  tmdb_id <<FK>> : bigint
 }
 
 entity "likes" as likes {
@@ -45,7 +45,7 @@ entity "lists" as lists {
   id : bigint
   --
   user_id <<FK>> : bigint
-  movie_id <<FK>> : bigint
+  tmdb_id <<FK>> : bigint
 }
 
 entity "inquiries" as inquiries {
@@ -57,19 +57,10 @@ entity "inquiries" as inquiries {
   email / メールアドレス : string
 }
 
-entity "movies（外部API）" as movies {
-  id : bigint
-  --
-  title : string
-}
-
 users ||..o{ ratings
 users ||..o{ reviews
 users ||..o{ likes
 users ||..o{ lists
-movies ||..o{ ratings
-movies ||..o{ reviews
-lists }o..|| movies
 reviews ||..o{ likes
 
 @enduml

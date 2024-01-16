@@ -54,4 +54,4 @@
 https://www.figma.com/file/D6yosjXGDsEEsYJhjG4XFo/Web%E3%82%A2%E3%83%97%E3%83%AA%EF%BC%9AQ-Film-Rating?type=design&node-id=8%3A179&mode=design&t=dAZXppMCiAn1QMxN-1
 
 ### ER図
-[![Image from Gyazo](https://i.gyazo.com/3b4aa9629e6c5bf0ba31c126e1a15708.png)](https://gyazo.com/3b4aa9629e6c5bf0ba31c126e1a15708)
+[![Image from Gyazo](https://i.gyazo.com/1112b2e6cc7c5e335b5dedde776af9bc.png)](https://gyazo.com/1112b2e6cc7c5e335b5dedde776af9bc)
