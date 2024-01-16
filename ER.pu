@@ -19,9 +19,9 @@ entity "users" as users {
 entity "ratings" as ratings {
   id : bigint
   --
-  rating_1 / 未定 : int
-  rating_2 / 未定 : int
-  rating_3 / 未定 : int
+  representation / 表象 : int
+  ending / 結末 : int
+  recommendation / おすすめ判断 : int
   user_id <<FK>> : bigint
   movie_id <<FK>> : bigint
 }
@@ -61,18 +61,15 @@ entity "movies（外部API）" as movies {
   id : bigint
   --
   title : string
-  -
-  -
-  -
 }
 
 users ||..o{ ratings
 users ||..o{ reviews
 users ||..o{ likes
 users ||..o{ lists
-reviews ||..o{ likes
 movies ||..o{ ratings
 movies ||..o{ reviews
-lists }o..|{ movies
+lists }o..|| movies
+reviews ||..o{ likes
 
 @enduml
