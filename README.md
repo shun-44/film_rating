@@ -34,6 +34,7 @@
 * 作品詳細（レコメンド機能）
 * 評価登録
 * 問い合わせページ（入力確認画面）
+* リスト
 
 ### その後の機能
 * レビュー投稿
@@ -51,3 +52,6 @@
 
 ### 画面遷移図
 https://www.figma.com/file/D6yosjXGDsEEsYJhjG4XFo/Web%E3%82%A2%E3%83%97%E3%83%AA%EF%BC%9AQ-Film-Rating?type=design&node-id=8%3A179&mode=design&t=dAZXppMCiAn1QMxN-1
+
+### ER図
+[![Image from Gyazo](https://i.gyazo.com/3b4aa9629e6c5bf0ba31c126e1a15708.png)](https://gyazo.com/3b4aa9629e6c5bf0ba31c126e1a15708)

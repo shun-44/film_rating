@@ -1,0 +1,78 @@
+@startuml
+
+' hide the spot
+hide circle
+
+' avoid problems with angled crows feet
+skinparam linetype ortho
+
+entity "users" as users {
+  id : bigint
+  --
+  name / 名前 : string
+  email / メールアドレス : string
+  icon / アイコン : string
+  crypted_password : string
+  salt : string
+}
+
+entity "ratings" as ratings {
+  id : bigint
+  --
+  rating_1 / 未定 : int
+  rating_2 / 未定 : int
+  rating_3 / 未定 : int
+  user_id <<FK>> : bigint
+  movie_id <<FK>> : bigint
+}
+
+entity "reviews" as reviews {
+  id : bigint
+  --
+  text / レビュー : text
+  user_id <<FK>> : bigint
+  movie_id <<FK>> : bigint
+}
+
+entity "likes" as likes {
+  id : bigint
+  --
+  user_id <<FK>> : bigint
+  review_id <<FK>> : bigint
+}
+
+entity "lists" as lists {
+  id : bigint
+  --
+  user_id <<FK>> : bigint
+  movie_id <<FK>> : bigint
+}
+
+entity "inquiries" as inquiries {
+  id : bigint
+  --
+  full_name / 氏名 : string
+  subject / 件名 : string
+  message / お問い合わせ内容 : text
+  email / メールアドレス : string
+}
+
+entity "movies（外部API）" as movies {
+  id : bigint
+  --
+  title : string
+  -
+  -
+  -
+}
+
+users ||..o{ ratings
+users ||..o{ reviews
+users ||..o{ likes
+users ||..o{ lists
+reviews ||..o{ likes
+movies ||..o{ ratings
+movies ||..o{ reviews
+lists }o..|{ movies
+
+@enduml
